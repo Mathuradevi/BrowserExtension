@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details Sync</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="popup">
+    <section class="header">
+      <div class="title-row">
+        <h1>Product Details Sync</h1>
+        <span class="version-chip">V10</span>
+      </div>
+      <div class="status-row">
+        <span id="statusBadge" class="badge idle">Idle</span>
+        <span id="progressText">0 / 0</span>
+      </div>
+      <div id="activityText" class="activity" aria-live="polite">Idle.</div>
+    </section>
+
+    <section class="controls">
+      <label class="marketplace-picker">
+        <span>Seller Central</span>
+        <select id="marketplaceSelect">
+          <option value="sellercentral.amazon.com">Amazon.com</option>
+          <option value="sellercentral.amazon.in">Amazon.in</option>
+        </select>
+      </label>
+      <button id="scanButton" class="primary">Start Sync</button>
+      <button id="stopButton">Stop</button>
+      <button id="exportButton" title="Download V10 diagnostic logs">Export Logs</button>
+      <button id="resetButton">Reset</button>
+    </section>
+
+    <section class="details">
+      <div class="detail">
+        <label>Current / Last ASIN</label>
+        <div id="currentAsin">-</div>
+      </div>
+      <div class="detail counts">
+        <div>
+          <label>Successful</label>
+          <div id="successfulCount">0</div>
+        </div>
+        <div>
+          <label>Failed</label>
+          <div id="failedCount">0</div>
+        </div>
+      </div>
+      <div class="detail">
+        <label>Last Error</label>
+        <div id="lastError">-</div>
+      </div>
+      <div class="detail">
+        <label>Stop Reason</label>
+        <div id="pauseReason">-</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

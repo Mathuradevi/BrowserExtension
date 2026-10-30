@@ -1,0 +1,48 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Seller Central Product Details Sync",
+  "version": "1.0.11",
+  "description": "Fetches ASINs without MPN, reads Seller Central product details, and syncs them back to the API.",
+  "permissions": [
+    "storage",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://89.117.20.71/*",
+    "https://sellercentral.amazon.com/*",
+    "https://sellercentral.amazon.in/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Product Details Sync",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://sellercentral.amazon.com/*",
+        "https://sellercentral.amazon.in/*"
+      ],
+      "js": [
+        "parser.js",
+        "amazon.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "networkInterceptor.js"
+      ],
+      "matches": [
+        "https://sellercentral.amazon.com/*",
+        "https://sellercentral.amazon.in/*"
+      ]
+    }
+  ]
+}

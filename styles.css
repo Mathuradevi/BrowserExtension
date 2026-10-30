@@ -1,0 +1,151 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #1f2933;
+}
+
+.popup {
+  width: 340px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.header h1 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.title-row h1 {
+  margin: 0;
+}
+
+.version-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 42px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #1f2933;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.status-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.activity {
+  min-height: 16px;
+  margin: -8px 0 16px;
+  color: #52606d;
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.badge.idle,
+.badge.stopped {
+  background: #d9e2ec;
+}
+
+.badge.running {
+  background: #d9f99d;
+}
+
+.badge.paused {
+  background: #fde68a;
+}
+
+.badge.completed {
+  background: #bfdbfe;
+}
+
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.marketplace-picker {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+  color: #52606d;
+}
+
+.marketplace-picker span {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.marketplace-picker select {
+  border: 1px solid #cbd2d9;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+button {
+  border: 1px solid #cbd2d9;
+  background: #fff;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+button.primary {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #fff;
+}
+
+.details {
+  display: grid;
+  gap: 10px;
+}
+
+.detail {
+  background: #fff;
+  border: 1px solid #d9e2ec;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.detail label {
+  display: block;
+  font-size: 11px;
+  color: #52606d;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.counts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
